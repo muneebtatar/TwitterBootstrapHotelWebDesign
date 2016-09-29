@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="shortcut icon" href="assets/ico/favicon.png">
+
+    <title>PHPTravels | Hotels</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="assets/css/bootstrap.css" rel="stylesheet">
+    <link href="assets/css/font-awesome.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="assets/css/main.css" rel="stylesheet">
+    <link href="assets/css/datepicker.css" rel="stylesheet">
+    <link href="assets/css/slider.css" rel="stylesheet">
+
+    <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/bootstrap-datepicker.js"></script>
+	<script src="assets/js/bootstrap-slider.js"></script>
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+
+    <!-- Fixed navbar -->
+    <div class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="index.html">PHPTravels</a>
+        </div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="index.html">HOME</a></li>
+            <li class="active"><a href="hotels.html">HOTELS</a></li>
+
+                    <li class="dropdown" id="menuLogin">
+            <a class="dropdown-toggle" href="#" data-toggle="dropdown" id="navLogin">My Account</a>
+            <div class="dropdown-menu" style="padding:17px; width: 230px;">
+              <form>
+                <input name="email" class="form-control" type="email" placeholder="Username"> <br>
+                <input name="password" class="form-control" type="password" placeholder="Password"><br>
+                <button class="btn btn-primary">Login</button><br><br>
+                 <a href="signup.html">New to PHPTravel? Sign up.</a>
+              </form>
+            </div>
+
+          </li>
+         
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </div>
+
+  <div class="well" style="margin-bottom: 0px; padding-bottom: 8px;">
+  	<div class="container"><center>
+  	<p class="quicksearchtext">Quick Search</p>
+  	<form class="form-inline quicksearchform">
+			<div class="form-group">
+				<input type="text" placeholder="City, State and country" class="form-control" style="width: 211px;">
+			</div>
+			<div class="form-group">
+				<input type="text" id="checkin" placeholder="Check in" class="form-control">
+			</div>
+			<div class="form-group">
+				<input type="text" id="checkout" placeholder="Check out" class="form-control">
+			</div>
+			<div class="form-group">
+				<input type="submit" class="btn btn-primary" value="Find Hotels">
+			</div>
+		</form>
+		</center></div>
+  	</div>
+  </div>
+  <div class="container" style="padding-top: 15px;">
+      <div class="col-md-3">
+        <div class="panel panel-default">
+  <!-- Default panel contents -->
+  <div class="panel-heading">Advanced search</div>
+  <div class="panel-body">
+    <form>
+    	<div class="form-group">
+				<label>Find What?</label>
+				<input type="text" placeholder="City, State and country" class="form-control">
+		</div>
+		<div class="form-group">
+			<div class="row">
+				<div class="col-md-6">
+					<label>Check in</label>
+					<input type="text" id="checkinn" placeholder="Check in" class="form-control">
+				</div>
+				<div class="col-md-6">
+					<label>Check out</label>
+					<input type="text" id="checkoutt" placeholder="Check out" class="form-control">
+				</div>
+			</div>
+		</div>
+		<div class="form-group">
+			<div class="row">
+				<div class="col-md-6">
+						<label>Adults</label>
+						<select name="adults" class="form-control">
+		                      <option value="1">1</option>
+		                      <option value="2">2</option>
+		                      <option value="3">3</option>
+		                      <option value="4">4</option>
+		                      <option value="5">5</option>
+		                      <option value="6">6</option>
+		                      <option value="7">7</option>
+		                      <option value="8">8</option>
+		                      <option value="9">9</option>
+		                      <option value="10">10</option>
+		                </select>
+				</div>
+				<div class="col-md-6">
+						<label>Children</label>
+						<select name="child" class="form-control">
+		                      <option value="0">0</option>
+		                      <option value="1">1</option>
+		                      <option value="2">2</option>
+		                      <option value="3">3</option>
+		                      <option value="4">4</option>
+		                      <option value="5">5</option>
+                    	</select>
+				</div>
+			</div>
+			<div class="form-group">
+				<hr>
+				<label style="margin-top: 5px; margin-bottom: 5px;">Price Range</label>
+				<center><div class="price"  data-slider-min="50" data-slider-max="1200 " data-slider-step="10" data-slider-value="[50,1200]"></div></center>
+			</div>
+			<hr>
+			<div class="form-group">
+			<label>Grade</label>
+			<select name="Grade" class="form-control">
+		        <option value="1">1</option>
+		        <option value="2">2</option>
+		        <option value="3">3</option>
+		        <option value="4">4</option>
+		        <option value="5">5</option>
+		        <option value="6">6</option>
+		        <option value="7">7</option>
+             </select>
+            </div>
+            <hr>
+            <div class="form-group">
+            	    <label>Hotels Types</label>
+		     			<div class=".col-xs-6 .col-sm-6">
+							<input class="pull-left" type="checkbox">&nbsp; Apartment 
+						</div>        
+						<div class=".col-xs-6 .col-sm-6">
+ 							<input class="pull-left" type="checkbox">&nbsp; Hotel
+ 						</div>
+ 						<div class=".col-xs-6 .col-sm-6">
+							<input class="pull-left" type="checkbox">&nbsp; Guest Accomodation
+						</div>
+ 						<div class=".col-xs-6 .col-sm-6">
+ 							<input class="pull-left" type="checkbox">&nbsp; Motel
+ 						</div>
+						<div class=".col-xs-6 .col-sm-6">
+ 							<input class="pull-left" type="checkbox">&nbsp; Recedence
+ 						</div>
+						<div class=".col-xs-6 .col-sm-6">
+							<input class="pull-left" type="checkbox">&nbsp; Resort       
+					 	</div>
+						<div class=".col-xs-6 .col-sm-6">
+							<input class="pull-left" type="checkbox">&nbsp; Convention Center        
+						</div>
+						<div class=".col-xs-6 .col-sm-6">
+ 							<input class="pull-left" type="checkbox">&nbsp; Time Share        
+ 						</div>
+						<div class=".col-xs-6 .col-sm-6">
+							<input class="pull-left" type="checkbox">&nbsp; Extended Stay
+						</div>
+            </div>
+            	<div class="form-group">
+            		<input type="submit" value="Search Hotels" class="btn btn-primary btn-block">
+            	</div>
+		</div>
+    </form>
+  </div>
+  </div>
+      </div>
+
+      <div class="col-md-9">
+        <div class="well hotel">
+        	<div class="row">
+        		<div class="col-md-3">
+        	<img src="http://phptravels.net/uploads/images/hotels/slider/thumbs/588989_2.jpg" class="thumbnail">
+        		</div>
+        	<div class="col-md-9 hotelinfocol">
+        	<p class="hoteltext hotelprice">$85</p>
+        	<h3 class="hotelheading"><a href="hotel.html">Hilton Alexandria Corniche</a></h3><br>
+        	<b>Alexandria</b>
+        	<span class="star" rel="tooltip" data-toggle="tooltip" data-placement="top" title="3 out of 5 stars"><i class="star fa fa-star"></i><i class="star fa fa-star"></i><i class="star fa fa-star"></i></span><span data-toggle="tooltip" data-placement="top" title="Reviews Score" rel="tooltip" class="reviewscore"><i class="fa fa-thumbs-up"></i> 8.5 </span>
+        	<p class="hoteltext">Situated near the beach in the heart of Alexandria, Hilton Alexandria Corniche is close to Royal Jewellery Museum, Montazah Beach, and Montazah Palace..</p>
+        	</div>
+        	</div>
+        </div>
+      
+       <div class="well hotel">
+        	<div class="row">
+        		<div class="col-md-3">
+        	<img src="http://phptravels.net/uploads/images/hotels/slider/thumbs/588989_2.jpg" class="thumbnail">
+        		</div>
+        	<div class="col-md-9 hotelinfocol">
+        	<p class="hoteltext hotelprice">$85</p>
+        	<h3 class="hotelheading"><a href="hotel.html">Hilton Alexandria Corniche</a></h3><br>
+        	<b>Alexandria</b>
+        	<span class="star" rel="tooltip" data-toggle="tooltip" data-placement="top" title="3 out of 5 stars"><i class="star fa fa-star"></i><i class="star fa fa-star"></i><i class="star fa fa-star"></i></span><span data-toggle="tooltip" data-placement="top" title="Reviews Score" rel="tooltip" class="reviewscore"><i class="fa fa-thumbs-up"></i> 8.5 </span>
+        	<p class="hoteltext">Situated near the beach in the heart of Alexandria, Hilton Alexandria Corniche is close to Royal Jewellery Museum, Montazah Beach, and Montazah Palace..</p>
+        	</div>
+        	</div>
+        </div>
+
+         <div class="well hotel">
+        	<div class="row">
+        		<div class="col-md-3">
+        	<img src="http://phptravels.net/uploads/images/hotels/slider/thumbs/588989_2.jpg" class="thumbnail">
+        		</div>
+        	<div class="col-md-9 hotelinfocol">
+        	<p class="hoteltext hotelprice">$85</p>
+        	<h3 class="hotelheading"><a href="hotel.html">Hilton Alexandria Corniche</a></h3><br>
+        	<b>Alexandria</b>
+        	<span class="star" rel="tooltip" data-toggle="tooltip" data-placement="top" title="3 out of 5 stars"><i class="star fa fa-star"></i><i class="star fa fa-star"></i><i class="star fa fa-star"></i></span><span data-toggle="tooltip" data-placement="top" title="Reviews Score" rel="tooltip" class="reviewscore"><i class="fa fa-thumbs-up"></i> 8.5 </span>
+        	<p class="hoteltext">Situated near the beach in the heart of Alexandria, Hilton Alexandria Corniche is close to Royal Jewellery Museum, Montazah Beach, and Montazah Palace..</p>
+        	</div>
+        	</div>
+        </div>
+
+         <div class="well hotel">
+        	<div class="row">
+        		<div class="col-md-3">
+        	<img src="http://phptravels.net/uploads/images/hotels/slider/thumbs/588989_2.jpg" class="thumbnail">
+        		</div>
+        	<div class="col-md-9 hotelinfocol">
+        	<p class="hoteltext hotelprice">$85</p>
+        	<h3 class="hotelheading"><a href="hotel.html">Hilton Alexandria Corniche</a></h3><br>
+        	<b>Alexandria</b>
+        	<span class="star" rel="tooltip" data-toggle="tooltip" data-placement="top" title="3 out of 5 stars"><i class="star fa fa-star"></i><i class="star fa fa-star"></i><i class="star fa fa-star"></i></span><span data-toggle="tooltip" data-placement="top" title="Reviews Score" rel="tooltip" class="reviewscore"><i class="fa fa-thumbs-up"></i> 8.5 </span>
+        	<p class="hoteltext">Situated near the beach in the heart of Alexandria, Hilton Alexandria Corniche is close to Royal Jewellery Museum, Montazah Beach, and Montazah Palace..</p>
+        	</div>
+        	</div>
+        </div>
+
+         <div class="well hotel">
+        	<div class="row">
+        		<div class="col-md-3">
+        	<img src="http://phptravels.net/uploads/images/hotels/slider/thumbs/588989_2.jpg" class="thumbnail">
+        		</div>
+        	<div class="col-md-9 hotelinfocol">
+        	<p class="hoteltext hotelprice">$85</p>
+        	<h3 class="hotelheading"><a href="hotel.html">Hilton Alexandria Corniche</a></h3><br>
+        	<b>Alexandria</b>
+        	<span class="star" rel="tooltip" data-toggle="tooltip" data-placement="top" title="3 out of 5 stars"><i class="star fa fa-star"></i><i class="star fa fa-star"></i><i class="star fa fa-star"></i></span><span data-toggle="tooltip" data-placement="top" title="Reviews Score" rel="tooltip" class="reviewscore"><i class="fa fa-thumbs-up"></i> 8.5 </span>
+        	<p class="hoteltext">Situated near the beach in the heart of Alexandria, Hilton Alexandria Corniche is close to Royal Jewellery Museum, Montazah Beach, and Montazah Palace..</p>
+        	</div>
+        	</div>
+        </div>
+
+         <div class="well hotel">
+        	<div class="row">
+        		<div class="col-md-3">
+        	<img src="http://phptravels.net/uploads/images/hotels/slider/thumbs/588989_2.jpg" class="thumbnail">
+        		</div>
+        	<div class="col-md-9 hotelinfocol">
+        	<p class="hoteltext hotelprice">$85</p>
+        	<h3 class="hotelheading"><a href="hotel.html">Hilton Alexandria Corniche</a></h3><br>
+        	<b>Alexandria</b>
+        	<span class="star" rel="tooltip" data-toggle="tooltip" data-placement="top" title="3 out of 5 stars"><i class="star fa fa-star"></i><i class="star fa fa-star"></i><i class="star fa fa-star"></i></span><span data-toggle="tooltip" data-placement="top" title="Reviews Score" rel="tooltip" class="reviewscore"><i class="fa fa-thumbs-up"></i> 8.5 </span>
+        	<p class="hoteltext">Situated near the beach in the heart of Alexandria, Hilton Alexandria Corniche is close to Royal Jewellery Museum, Montazah Beach, and Montazah Palace..</p>
+        	</div>
+        	</div>
+        </div>
+      </div>
+  </div>
+  
+  
+  <!-- FOOTER -->
+<div id="f">
+    <div class="container">
+      <div class="row centered">
+        <h1 style="font-weight: 200; font-weight: none; color: white;">PHPTravels</h1>
+        <a href="about.html " style="display: inline-block; margin: 5px;">About us</a>
+      <br>
+          <a style="display: inline-block;" href=""><i id="social" class="fa fa-facebook-square fa-3x social-fb"></i></a>
+           <a style="display: inline-block;" href=""><i id="social" class="fa fa-twitter-square fa-3x social-tw"></i></a>
+         <a style="display: inline-block;" href=""><i id="social" class="fa fa-instagram fa-3x social-gp"></i></a>
+
+      </div><!-- row -->
+    </div><!-- container -->
+
+        
+      </div>
+
+  </div><!-- Footer -->
+
+<script type="text/javascript">
+
+$(function () {
+	$('#checkin').datepicker();
+	$('#checkout').datepicker();
+
+	$('#checkinn').datepicker();
+	$('#checkoutt').datepicker();
+
+	$("[rel='tooltip']").tooltip();
+
+	$('.price').slider();
+	$('.rating').raty({ starType: 'i' });
+ });
+</script>
+</script>
+  </body>
+</html>

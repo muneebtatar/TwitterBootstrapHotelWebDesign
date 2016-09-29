@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="shortcut icon" href="assets/ico/favicon.png">
+
+    <title>PHPTravels | Booking a room</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="assets/css/bootstrap.css" rel="stylesheet">
+    <link href="assets/css/font-awesome.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="assets/css/main.css" rel="stylesheet">
+    <link href="assets/css/datepicker.css" rel="stylesheet">
+
+    <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/bootstrap-datepicker.js"></script>
+
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+
+    <!-- Fixed navbar -->
+    <div class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="index.html">PHPTravels</a>
+        </div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav navbar-right">
+            <li class="active"><a href="index.html">HOME</a></li>
+            <li><a href="hotels.html">HOTELS</a></li>
+                    <li class="dropdown" id="menuLogin">
+            <a class="dropdown-toggle" href="#" data-toggle="dropdown" id="navLogin">My Account</a>
+            <div class="dropdown-menu" style="padding:17px; width: 230px;">
+              <form>
+                <input name="email" class="form-control" type="email" placeholder="Username"> <br>
+                <input name="password" class="form-control" type="password" placeholder="Password"><br>
+                <button class="btn btn-primary">Login</button><br><br>
+                 <a href="signup.html">New to PHPTravel? Sign up.</a>
+              </form>
+            </div>
+
+          </li>
+         
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </div>
+    <div class="container" style="padding-top: 45px; width: 1300px;">
+    	<div class="col-md-4">
+    	<div class="well" style="background: white;">
+   		<a href="hotel.html">
+            <div class="col-md-6 ">
+             <img src="http://phptravels.net/uploads/images/hotels/slider/thumbs/516510447343_80_z.jpg.jpg" class="img-thumbnail" alt="">     
+            </div>
+                  <h4 style="padding-top: 5px; margin-bottom: 0px;"><strong>Hilton Alexandria Corniche</strong></h4>
+                  <h6 style="margin-top: 0px;">In Alexandria</h6>
+             </a>
+         </div>
+
+         	<div class="well" style="background: white;">
+         		<p style="margin-bottom: 0px;">1 Night</p>
+         		<p style="margin-bottom: 0px;"><b>26-08-2014 - 27-08-2014</b></p>
+         		<p style="margin: 10px; margin-bottom: 0px; font-size: 23px;">
+         			Total: $0<br>
+         			<small style="font-size: 15px;">Deposit: $0</small><br>
+         			<small style="font-size: 15px;">Tax and VAT: $0</small>
+         		</p>
+         	</div>
+    	</div>
+    	<div class="col-md-8">
+    		<div class="well" style="background: white;">
+         <h3 style="margin-top: 0px; margin-bottom: 0px;">Step 1: Select your room.</h3>
+    		<table class="table">
+      <thead>
+        <tr>
+          <th>Room</th>
+          <th>Rate per night</th>
+          <th>Reservation</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>
+          <div class="row">
+          	<div class="col-md-4">
+          <img src="http://phptravels.net/uploads/images/hotels/rooms/1605237841_123_z.jpg.jpg" class="thumbnail">
+          	</div>
+          	<div class="col-md-4">
+          		 <p>Twin Guest Room <br>Max Occupancy<br>
+				6 Adults   4 Children</p>
+          	</div>
+          </div>
+          <td><p>US $250/<del>$300</del></p></td>
+          <td>
+          	<button type="button" class="btn btn-primary btn-block">Book</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    		</div>
+
+    	<div class="well" style="background: white;">
+      <h3 style="margin-top: 0px;">Step 2: Select your supplements, <b>The supplements are optional.</b></h3>
+    	<table class="table">
+        <tbody>
+         <tr>
+                                
+                                <td class="col-sm-8 col-md-6">
+                <div class="media">
+                
+
+                <a class="img-thumbnail pull-left colorbox cboxElement" href="http://phptravels.net/uploads/images/supplements/933013romantic.jpg.jpg"> <img class="media-object" src="http://phptravels.net/uploads/images/supplements/933013romantic.jpg.jpg" style="width: 100px; height: 72px;"> </a>
+                
+                <div class="media-body">
+                <h4 class="media-heading"><a href="#"><strong>Romantic Room Decoration</strong></a></h4>
+
+                <h5 class="media-heading">Welcome Sweets in Room upon Arrival One Bottle of Sparkling Wine in Room Bath Wellness Extras included: Bathrobes, Slippers,…</h5>
+
+
+                </div>
+                </div>
+                </td>
+
+                <td class="col-sm-2 col-md-2 text-center">
+                <strong>
+
+              
+            US $15 / <del>$25</del><p></p>
+            
+                </strong>
+                <!-- END PHPTRAVELS ROOMS RIGHT INFO -->
+             </td>
+              <td class="col-sm-1 col-md-1">
+             <input type="checkbox" class="supplements" id="supplements_4" data-price="15" data-title="Romantic Room Decoration" onclick="javascript: select_sup($(this).data('price'),$(this).data('title'),'4','$');" name="supplements[]" value="4">
+          </td>
+         </tr>
+                         <tr><td class="col-sm-8 col-md-6">
+                <div class="media">
+                
+
+                <a class="img-thumbnail pull-left colorbox cboxElement" href="http://phptravels.net/uploads/images/supplements/207459flower.jpg.jpg"> <img class="media-object" src="http://phptravels.net/uploads/images/supplements/207459flower.jpg.jpg" style="width: 100px; height: 72px;"> </a>
+                
+                <div class="media-body">
+                <h4 class="media-heading"><a href="#"><strong>Flower bouquet in Room</strong></a></h4>
+
+                <h5 class="media-heading">A flower bouquet made up of seasonally available flowers in your room upon arrival, The following are just some of the many,…</h5>
+
+
+                </div>
+                </div>
+                </td>
+
+                <td class="col-sm-2 col-md-2 text-center">
+                <strong>
+
+                          US $30            
+                </strong>
+                <!-- END PHPTRAVELS ROOMS RIGHT INFO -->
+             </td>
+              <td class="col-sm-1 col-md-1">
+             <input type="checkbox" class="supplements" id="supplements_3" data-price="30" data-title="Flower bouquet in Room" onclick="javascript: select_sup($(this).data('price'),$(this).data('title'),'3','$');" name="supplements[]" value="3">
+          </td>
+         </tr>
+                         <tr><td class="col-sm-8 col-md-6">
+                <div class="media">
+                
+
+                <a class="img-thumbnail pull-left colorbox cboxElement" href="http://phptravels.net/uploads/images/supplements/543671campaign.jpg.jpg"> <img class="media-object" src="http://phptravels.net/uploads/images/supplements/543671campaign.jpg.jpg" style="width: 100px; height: 72px;"> </a>
+                
+                <div class="media-body">
+                <h4 class="media-heading"><a href="#"><strong>Champagne</strong></a></h4>
+
+                <h5 class="media-heading">Enjoy a bottle of premium Champagne in your Room â€“ ice-cooled at your arrival, or at any later time of your choice.</h5>
+
+
+                </div>
+                </div>
+                </td>
+
+                <td class="col-sm-2 col-md-2 text-center">
+                <strong>
+
+              
+            US $120 / <del>$150</del><p></p>
+            
+                </strong>
+                <!-- END PHPTRAVELS ROOMS RIGHT INFO -->
+             </td>
+              <td class="col-sm-1 col-md-1">
+             <input type="checkbox" class="supplements" id="supplements_2" data-price="120" data-title="Champagne" onclick="javascript: select_sup($(this).data('price'),$(this).data('title'),'2','$');" name="supplements[]" value="2">
+          </td>
+         </tr>
+                         <tr><td class="col-sm-8 col-md-6">
+                <div class="media">
+                
+
+                <a class="img-thumbnail pull-left colorbox cboxElement" href="http://phptravels.net/uploads/images/supplements/312287Bath-and-C.jpg"> <img class="media-object" src="http://phptravels.net/uploads/images/supplements/312287Bath-and-C.jpg" style="width: 100px; height: 72px;"> </a>
+                
+                <div class="media-body">
+                <h4 class="media-heading"><a href="#"><strong>Bath Wellness</strong></a></h4>
+
+                <h5 class="media-heading">Soap Flakes for 1-2 full bathtubs Rose Bath Soak for several bathtubs Bath Robes and Slippers Bath Wellness â€“ enjoy…</h5>
+
+
+                </div>
+                </div>
+                </td>
+
+                <td class="col-sm-2 col-md-2 text-center">
+                <strong>
+
+              
+            US $50 / <del>$60</del><p></p>
+            
+                </strong>
+                <!-- END PHPTRAVELS ROOMS RIGHT INFO -->
+             </td>
+              <td class="col-sm-1 col-md-1">
+             <input type="checkbox" class="supplements" id="supplements_1" data-price="50" data-title="Bath Wellness" onclick="javascript: select_sup($(this).data('price'),$(this).data('title'),'1','$');" name="supplements[]" value="1">
+          </td>
+         </tr>
+                     </tbody>
+    </table>
+    	</div>
+        <div class="well" style="background: white; margin: 0px;">
+          <h3 style="margin: 0px;">Step 3: Book the room</h3>
+      </div>
+    		<div class="panel-body">
+              <ul id="myTab" class="nav nav-tabs">
+                <li class="active"><a href="#Guest" id="guesttab" data-toggle="tab">Book as a guest</a></li>
+                <li class=""><a href="#Sign-In" id="signintab" data-toggle="tab">Sign In</a></li>
+                <li class=""><a href="#Sign-Up" id="signuptab" data-toggle="tab">Create an account</a></li>
+              </ul>
+              <!-- PHPTRAVELS Booking tabs ending  -->
+              <div id="myTabContent" class="tab-content">
+                <!-- PHPTRAVELS Guest Booking Starting  -->
+                <div class="tab-pane fade active in" id="Guest">
+                  
+                		<div class="well" style="background: white;">
+                      
+                      <div class="panel-body form-horizontal">
+                      <form>
+                        <div class="form-group">
+                          <div class="col-md-3">First Name</div>
+                          <div class="col-md-6">
+                            <input class="form-control" type="text" placeholder="First Name" name="firstname" value="">
+                          </div>
+                        </div>
+                        <div class="form-group">
+                          <div class="col-md-3">Last Name</div>
+                          <div class="col-md-6">
+                            <input class="form-control" type="text" placeholder="Last Name" name="lastname" value="">
+                          </div>
+                        </div>
+                        <div class="form-group">
+                          <div class="col-md-3">Mobile Number</div>
+                          <div class="col-md-6">
+                            <input class="form-control" type="text" placeholder="example : 923311442244" name="phone" value="">
+                          </div>
+                        </div>
+                        <div class="form-group">
+                          <div class="col-md-3">Email</div>
+                          <div class="col-md-6">
+                            <input class="form-control" type="text" placeholder="Email" name="email" value="">
+                          </div>
+                        </div>
+                            <div class="form-group">
+                          <div class="col-md-3">Confirm Email</div>
+                          <div class="col-md-6">
+                            <input class="form-control" type="email" placeholder="Confirm Email" name="confirmemail" value="">
+                          </div>
+                        </div>
+                        <div class="form-group">
+                          <div class="col-md-3">Notes / Additional Requests</div>
+                          <div class="col-md-8">
+                            <textarea class="form-control" placeholder="You can enter any additional notes or information you want included with your order here..." rows="5" name="additionalnotes"></textarea>
+                          </div>
+                        </div>
+                          <input type="submit" class="btn btn-primary btn-lg" value="Book room">
+                        </form>
+                      </div>
+                    </div>
+
+                  
+                </div>
+             
+                <div class="tab-pane fade" id="Sign-In">
+                <div class="well" style="background: white;">
+                       <form>
+              
+                        <div class="form-group">
+                          <label>Email</label>
+                            <input class="form-control" type="text" placeholder="Email" name="username" id="username" value="">
+                        </div>
+                        <div class="form-group">
+                          <label>Password</label>
+                            <input class="form-control" type="password" placeholder="Password" name="password" id="password" value="">
+                        </div>
+                    <input type="submit" class="btn btn-primary btn-lg" value="Login & Book room">
+
+
+                       </form> </div>
+                </div>
+
+                <div class="tab-pane fade" id="Sign-Up">
+                	<div class="well" style="background: white;">
+                  <form class="form-horizontal" id="signupform">
+                        <div class="form-group">
+                          <div class="col-md-3">First Name</div>
+                          <div class="col-md-6">
+                            <input class="form-control" type="text" placeholder="First Name" name="firstname" value="">
+                          </div>
+                        </div>
+                        <div class="form-group">
+                          <div class="col-md-3">Last Name</div>
+                          <div class="col-md-6">
+                            <input class="form-control" type="text" placeholder="Last Name" name="lastname" value="">
+                          </div>
+                        </div>
+                        <div class="form-group">
+                          <div class="col-md-3">Mobile Number</div>
+                          <div class="col-md-6">
+                            <input class="form-control" type="text" placeholder="example : 923311442244" name="phone" value="">
+                          </div>
+                        </div>
+
+                        <div class="form-group">
+                          <div class="col-md-3">Email</div>
+                          <div class="col-md-6">
+                            <input class="form-control" type="text" placeholder="Email" name="email" value="">
+                          </div>
+                        </div>
+                        <div class="form-group">
+                          <div class="col-md-3">Password</div>
+                          <div class="col-md-6">
+                            <input class="form-control" type="password" placeholder="Password" name="password" value="">
+                          </div>
+                        </div>
+                        <div class="form-group">
+                          <div class="col-md-3">Confirm Password</div>
+                          <div class="col-md-6">
+                            <input class="form-control" type="password" placeholder="confirm Password" name="confirmpassword" value="">
+                          </div>
+                        </div>
+
+                        <div class="form-group">
+                          <div class="col-md-3">Notes / Additional Requests</div>
+                          <div class="col-md-8">
+                            <textarea class="form-control" placeholder="You can enter any additional notes or information you want included with your order here..." rows="5" name="additionalnotes"></textarea>
+                          </div>
+                        </div>
+                        <input type="submit" class="btn btn-primary btn-lg" value="Create account & book room">
+                    </div>
+
+                  </form>
+                </div>
+                <!-- PHPTRAVELS Sign in Ending  -->
+              </div>
+
+</div>
+</div>
+</div>
+</div>
+	<!-- FOOTER -->
+<div id="f">
+    <div class="container">
+      <div class="row centered">
+        <h1 style="font-weight: 200; font-weight: none; color: white;">PHPTravels</h1>
+        <a href="about.html " style="display: inline-block; margin: 5px;">About us</a>
+      <br>
+          <a style="display: inline-block;" href=""><i id="social" class="fa fa-facebook-square fa-3x social-fb"></i></a>
+           <a style="display: inline-block;" href=""><i id="social" class="fa fa-twitter-square fa-3x social-tw"></i></a>
+         <a style="display: inline-block;" href=""><i id="social" class="fa fa-instagram fa-3x social-gp"></i></a>
+
+      </div><!-- row -->
+    </div><!-- container -->
+
+        
+      </div>
+
+  </div><!-- Footer -->
+  </body>
+</html>
+
+
+
